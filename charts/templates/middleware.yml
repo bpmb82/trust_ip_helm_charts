@@ -1,0 +1,21 @@
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: trust-ip-middleware
+  namespace: {{ .Values.namespace }}
+spec:
+  chain:
+    middlewares:
+      - name: trust-ip-forward
+---
+apiVersion: traefik.io/v1alpha1
+kind: Middleware
+metadata:
+  name: trust-ip-forward
+  namespace: {{ .Values.namespace }}
+spec:
+  forwardAuth:
+    address: http://{{ include "trust-ip.fullname" . }}.{{ .Values.namespace }}.svc.cluster.local:8080
+    trustForwardHeader: true
+    authResponseHeaders:
+      - X-Forwarded-For

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "trust-ip.fullname" . }}-test-connection"
+  labels:
+    {{- include "trust-ip.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "trust-ip.fullname" . }}:{{ .Values.service.port }}','--header', 'X-Forwarded-For: 127.0.0.1']
+  restartPolicy: Never
