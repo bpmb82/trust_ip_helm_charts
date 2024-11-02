@@ -79,14 +79,14 @@ livenessProbe:
   httpGet:
     path: /health
     port: 8080
-    initialDelaySeconds: 3
-    periodSeconds: 10
+  initialDelaySeconds: 3
+  periodSeconds: 10
 readinessProbe:
   httpGet:
     path: /health
     port: 8080
-    initialDelaySeconds: 2
-    periodSeconds: 10
+  initialDelaySeconds: 2
+  periodSeconds: 10
 
 nodeSelector: {}
 
