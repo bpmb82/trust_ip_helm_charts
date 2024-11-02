@@ -13,7 +13,7 @@ environment:
     value: "https://ip-ranges.atlassian.com"
 ```
 
-Deploy the chart:
+Deploy the chart as follows:
 
 ```
 helm repo add trust-ip https://bpmb82.github.io/trust_ip_helm_charts
