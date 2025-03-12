@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   trust-ip:
   - apiVersion: v2
+    appVersion: 2.0.5
+    created: "2025-03-12T16:09:20.47089349Z"
+    description: A Helm chart for tRust_ip
+    digest: a65326084590900df0cb381d50dbe67c29850230cc0c99ee4b2caabcd5709c01
+    name: trust-ip
+    type: application
+    urls:
+    - https://github.com/bpmb82/trust_ip_helm_charts/releases/download/trust-ip-1.0.2/trust-ip-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
     appVersion: 2.0.4
     created: "2024-11-03T12:55:29.568512165Z"
     description: A Helm chart for tRust_ip
@@ -31,4 +41,4 @@ entries:
     urls:
     - https://github.com/bpmb82/trust_ip_helm_charts/releases/download/trust-ip-0.1.0/trust-ip-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-03T12:55:29.568526141Z"
+generated: "2025-03-12T16:09:20.470913167Z"
